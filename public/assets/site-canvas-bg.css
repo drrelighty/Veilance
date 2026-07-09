@@ -11,11 +11,11 @@
   height: 100%;
 }
 
-/* Header navigation: bold, one size up (applies site-wide) */
+/* Header navigation: one size up (applies site-wide) */
 .header-nav-item,
 .header-nav-item a,
 .header-nav-folder-title,
 .header-nav-folder-title-text {
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   font-size: 1.15em !important;
 }
