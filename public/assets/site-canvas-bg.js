@@ -12,7 +12,7 @@
     height: 0,
     dpr: 1,
     seed: 0,
-    interval: 250,
+    interval: 500,
     numLines: 10,
   };
 
