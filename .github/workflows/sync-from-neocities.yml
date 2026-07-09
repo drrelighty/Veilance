@@ -29,15 +29,16 @@ jobs:
 
           for item in data.get("files", []):
               if item.get("is_directory"):
-                  os.makedirs(item["path"], exist_ok=True)
+                  os.makedirs(os.path.join("public", item["path"]), exist_ok=True)
                   continue
               path = item["path"]
-              d = os.path.dirname(path)
+              local_path = os.path.join("public", path)
+              d = os.path.dirname(local_path)
               if d:
                   os.makedirs(d, exist_ok=True)
               url = "https://veilance.neocities.org/" + urllib.parse.quote(path)
-              subprocess.run(["curl", "-sL", "-o", path, url], check=True)
-              print("downloaded", path)
+              subprocess.run(["curl", "-sL", "-o", local_path, url], check=True)
+              print("downloaded", local_path)
           EOF
           rm -f filelist.json
 
