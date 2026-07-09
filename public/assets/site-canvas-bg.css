@@ -13,11 +13,23 @@
 #footer-sections {
   position: relative;
 }
-#footer-sections .section-border {
+#footer-sections .section-border,
+#footer-sections .section-background {
   background: transparent !important;
   background-color: transparent !important;
 }
 #footer-sections > *:not(.codex-canvas-bg):not(link):not(script) {
   position: relative;
   z-index: 1;
+}
+
+/* The page body defaults to white; only individual sections carry a dark
+   theme, leaving gaps (like the header band) showing white. Make the base
+   background dark site-wide and let the header's solid white backing
+   become transparent so it matches. */
+body {
+  background-color: #000 !important;
+}
+#header .header-background-solid {
+  background-color: transparent !important;
 }
