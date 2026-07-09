@@ -36,7 +36,7 @@ jobs:
               if d:
                   os.makedirs(d, exist_ok=True)
               url = "https://veilance.neocities.org/" + urllib.parse.quote(path)
-              subprocess.run(["curl", "-s", "-o", path, url], check=True)
+              subprocess.run(["curl", "-sL", "-o", path, url], check=True)
               print("downloaded", path)
           EOF
           rm -f filelist.json
