@@ -50,8 +50,8 @@ body#collection-69dc4165524a8040ff914e1e #siteWrapper,
 body#collection-69dc4165524a8040ff914e1e #page,
 body#collection-69dc4165524a8040ff914e1e main,
 body#collection-69dc4165524a8040ff914e1e article#sections {
-  background: #000 !important;
-  background-color: #000 !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 body#collection-69dc4165524a8040ff914e1e .page-section,
 body#collection-69dc4165524a8040ff914e1e .section-border,
@@ -199,17 +199,10 @@ body#collection-69dc4165524a8040ff914e1e .codex-home-video {
   pointer-events: none;
   z-index: 1;
 }
-#codex-hero-canvas-wrap {
-  position: absolute;
+#codex-page-canvas-wrap {
+  position: fixed !important;
   inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-#codex-hero-canvas-wrap canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
+  z-index: -1;
 }
 body#collection-69dc4165524a8040ff914e1e #header .header-background,
 body#collection-69dc4165524a8040ff914e1e #header .header-background-solid,
@@ -227,6 +220,10 @@ body#collection-69dc4165524a8040ff914e1e .header-nav-folder-title-text {
 }
 body#collection-69dc4165524a8040ff914e1e .header-nav-list {
   flex-wrap: nowrap !important;
+}
+body#collection-69dc4165524a8040ff914e1e .header-title-nav-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 [id="69dc4165524a8040ff914e21"] {
   position: relative;
@@ -265,6 +262,7 @@ body#collection-69dc4165524a8040ff914e1e .fe-block-yui_3_17_2_1_1776053164867_31
         
       
      seven-one-global-animations" tabindex="-1" data-animation-state="booted">
+    <div id="codex-page-canvas-wrap" class="codex-canvas-bg"></div>
     <div id="siteWrapper" class="clearfix site-wrapper">
       
         <div id="floatingCart" class="floating-cart hidden">
@@ -1764,7 +1762,6 @@ body#collection-69dc4165524a8040ff914e1e .fe-block-yui_3_17_2_1_1776053164867_31
 </style><div class="fluid-engine fe-69dc4165524a8040ff914e20"><div class="fe-block fe-block-yui_3_17_2_1_1776055240092_15571"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-video video-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.video/b1a021ce-a6f8-4232-af5f-7d594c0d71d8_216/website.components.video.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.video/b1a021ce-a6f8-4232-af5f-7d594c0d71d8_216/4032.js&quot;,&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.video/b1a021ce-a6f8-4232-af5f-7d594c0d71d8_216/website.components.video.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.video" data-sqsp-block="video" data-website-component-id="yui_3_17_2_1_1776055240092_15571" id="block-yui_3_17_2_1_1776055240092_15571"><div class="sqs-block-content">
   <div class="intrinsic" style="max-width:100%">
     <div class="embed-block-wrapper" style="padding-bottom:56.25%;position:relative;">
-      <div id="codex-hero-canvas-wrap" class="codex-canvas-bg"></div>
       <video class="codex-home-video" autoplay muted loop playsinline webkit-playsinline preload="auto" src="https://res.cloudinary.com/dd6joey5o/video/upload/v1776650942/veilance_l5dyet.mp4">
         <source src="https://res.cloudinary.com/dd6joey5o/video/upload/v1776650942/veilance_l5dyet.mp4" type="video/mp4">
       </video>
