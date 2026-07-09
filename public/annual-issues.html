@@ -3361,7 +3361,7 @@
   }
 
   .fe-block-b425ef47d51fb761bd27 {
-    grid-area: 18/1/25/11;
+    grid-area: 18/2/25/11;
     z-index: 2;
 
     @media (max-width: 767px) {
@@ -3386,7 +3386,7 @@
 
   @media (min-width: 768px) {
     .fe-block-b425ef47d51fb761bd27 {
-      grid-area: 3/1/25/13;
+      grid-area: 3/2/25/13;
       z-index: 2;
 
       
@@ -4356,8 +4356,52 @@
       padding: 0 !important;
       position: relative !important;
     }
+    #block-75ae0ac57b2e8d89a90c .js-content-mode-element {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    #codex-issue1-video-wrap {
+      position: relative;
+      width: 100%;
+      line-height: 0;
+    }
+    #codex-issue1-video-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    #codex-issue1-fullscreen-btn {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      z-index: 5;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    #codex-issue1-fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    #codex-issue1-fullscreen-btn svg {
+      width: 18px;
+      height: 18px;
+    }
   </style>
-  <video autoplay muted loop playsinline webkit-playsinline preload="auto" src="https://res.cloudinary.com/dd6joey5o/video/upload/v1783610566/issue_1_promo_dec_12_11_30_tj3lea.mp4" style="display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"></video>
+  <div id="codex-issue1-video-wrap">
+    <video id="codex-issue1-video" autoplay muted loop playsinline webkit-playsinline preload="auto" src="https://res.cloudinary.com/dd6joey5o/video/upload/v1783610566/issue_1_promo_dec_12_11_30_tj3lea.mp4"></video>
+    <button id="codex-issue1-fullscreen-btn" type="button" aria-label="Toggle fullscreen" onclick="(function(v){ if(v.requestFullscreen){ v.requestFullscreen(); } else if(v.webkitEnterFullscreen){ v.webkitEnterFullscreen(); } else if(v.webkitRequestFullscreen){ v.webkitRequestFullscreen(); } })(document.getElementById('codex-issue1-video'))">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+    </button>
+  </div>
   
     
   
