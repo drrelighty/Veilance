@@ -1,0 +1,50 @@
+name: Sync FROM Neocities (one-time import)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch file list from Neocities
+        env:
+          TOKEN: ${{ secrets.NEOCITIES_API_TOKEN }}
+        run: |
+          curl -s -H "Authorization: Bearer $TOKEN" \
+            https://neocities.org/api/list > filelist.json
+          cat filelist.json
+
+      - name: Download every non-directory file
+        run: |
+          python3 - <<'EOF'
+          import json, os, subprocess, urllib.parse
+
+          with open("filelist.json") as f:
+              data = json.load(f)
+
+          for item in data.get("files", []):
+              if item.get("is_directory"):
+                  os.makedirs(item["path"], exist_ok=True)
+                  continue
+              path = item["path"]
+              d = os.path.dirname(path)
+              if d:
+                  os.makedirs(d, exist_ok=True)
+              url = "https://veilance.neocities.org/" + urllib.parse.quote(path)
+              subprocess.run(["curl", "-s", "-o", path, url], check=True)
+              print("downloaded", path)
+          EOF
+          rm -f filelist.json
+
+      - name: Commit imported site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import existing site from Neocities" || echo "nothing to commit"
+          git push
