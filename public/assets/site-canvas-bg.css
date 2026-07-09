@@ -26,13 +26,22 @@
 #footer-sections img[src*="title.png"] {
   filter: brightness(0) invert(1);
 }
-#footer-sections::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-  pointer-events: none;
+/* Dim the footer canvas itself (uniform everywhere) instead of an overlay
+   scrim, which left uncovered patches where geometry didn't line up. */
+#footer-sections .codex-canvas-bg canvas {
+  opacity: 0.4;
+}
+
+/* Hide Squarespace's background pause button */
+.background-pause-button {
+  display: none !important;
+}
+
+/* Header nav text: match footer body text size (was ~13.8px vs 15.6px) */
+#header .header-nav-item,
+#header .header-nav-item a,
+#header .header-nav-folder-title {
+  font-size: 1.13em !important;
 }
 
 /* Squarespace's scroll-entrance animation splits heading text into
