@@ -27,7 +27,7 @@
         // (header bar) and tall/large (full hero background) containers
         // get a comparable amount of line detail instead of looking sparse.
         var longSide = Math.max(config.width, config.height);
-        config.numLines = longSide / 45;
+        config.numLines = longSide / 22;
 
         if (canvas) {
           canvas.remove();
@@ -114,9 +114,9 @@
       };
 
       p.draw = function () {
-        p.background(29);
+        p.background(0);
         p.strokeWeight(0.8);
-        p.stroke(230);
+        p.stroke(255);
         p.noFill();
 
         var mw = 0.05 * config.width;
