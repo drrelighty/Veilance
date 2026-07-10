@@ -1483,6 +1483,7 @@
 
 
 <section
+  id="codex-books-hero-section"
   data-test="page-section"
   
   data-section-theme="dark"
@@ -1656,6 +1657,17 @@
       
       
       
+      <div id="codex-books-canvas-wrap" class="codex-canvas-bg"></div>
+      <link rel="stylesheet" href="/assets/site-canvas-bg.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+      <script src="/assets/site-canvas-bg.js"></script>
+      <style>
+        #codex-books-hero-section { position: relative; }
+        #codex-books-canvas-wrap ~ [data-fluid-engine="true"] {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
       <div data-fluid-engine="true"><style>.fe-69dc5448be16fe3c5ddd38d8 {
   --grid-gutter: calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px);
   --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 );
