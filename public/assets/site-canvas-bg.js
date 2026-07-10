@@ -7,6 +7,7 @@
   var CONTAINER_CLASS = 'codex-canvas-bg';
 
   function makeSketch(container) {
+    var inverted = container.getAttribute('data-invert') === 'true';
     return function (p) {
       var config = {
         width: 0,
@@ -114,9 +115,15 @@
       };
 
       p.draw = function () {
-        p.background(0);
-        p.strokeWeight(0.8);
-        p.stroke(255);
+        if (inverted) {
+          p.background(255);
+          p.strokeWeight(0.8);
+          p.stroke(0);
+        } else {
+          p.background(0);
+          p.strokeWeight(0.8);
+          p.stroke(255);
+        }
         p.noFill();
 
         var mw = 0.05 * config.width;

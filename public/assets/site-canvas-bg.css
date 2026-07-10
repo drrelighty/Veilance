@@ -13,6 +13,10 @@
 #footer-sections {
   position: relative;
 }
+#footer-sections .content-wrapper {
+  padding-top: 2vmax !important;
+  padding-bottom: 2vmax !important;
+}
 #footer-sections .section-border,
 #footer-sections .section-background {
   background: transparent !important;
@@ -72,12 +76,35 @@
 }
 #header .header-title-logo img,
 #header .header-title-logo svg {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) drop-shadow(0 0 22px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 36px rgba(255, 255, 255, 0.6));
+  filter: none;
 }
-#header .header-nav-item,
-#header .header-nav-item a,
-#header .header-nav-folder-title {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 22px rgba(255, 255, 255, 0.85), 0 0 36px rgba(255, 255, 255, 0.6);
+
+#header .header-background,
+#header .header-background-solid,
+#header .theme-bg--primary {
+  background: transparent !important;
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+#codex-header-canvas-wrap {
+  z-index: -1;
+}
+#header .header-display-desktop,
+#header .header-title,
+#header .header-title-logo,
+#header .header-nav,
+#header .header-title-nav-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header centering: Squarespace's branding-center-nav-center layout relies
+   on empty social/cart action columns on either side to force the middle
+   column visually centered. When those are empty/collapsed, the outer
+   flex container's default justify-content:flex-start left-packs
+   everything instead. Force centering directly, site-wide. */
+#header .header-display-desktop {
+  justify-content: center !important;
 }
 
 /* The page body defaults to white; only individual sections carry a dark
