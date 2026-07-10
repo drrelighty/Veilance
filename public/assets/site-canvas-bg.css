@@ -16,10 +16,10 @@
 .fluid-engine:empty {
   display: none !important;
 }
-.page-section:has(.fluid-engine:not(:has(*))):not(:has(.fe-block)) {
+.page-section:has(.fluid-engine:empty):not(:has(.fe-block)) {
   display: none !important;
 }
-.page-section:has(.blog-side-by-side-wrapper:not(:has(*))) {
+.page-section:has(.blog-side-by-side-wrapper):not(:has(article)) {
   display: none !important;
 }
 #footer-sections img[src*="logo+large.png"],
