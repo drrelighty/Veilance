@@ -105,6 +105,13 @@
    everything instead. Force centering directly, site-wide. */
 #header .header-display-desktop {
   justify-content: center !important;
+  position: relative !important;
+}
+#header .header-actions--right {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 /* The page body defaults to white; only individual sections carry a dark
