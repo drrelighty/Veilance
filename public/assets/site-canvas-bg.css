@@ -10,30 +10,18 @@
   height: 100%;
 }
 
-#footer-sections {
-  position: relative;
+/* Some pages have leftover empty content grids reserving blank vertical
+   space before the footer. Collapse any fluid-engine section with no
+   actual blocks inside it. */
+.fluid-engine:empty {
+  display: none !important;
 }
-#footer-sections .content-wrapper {
-  padding-top: 2vmax !important;
-  padding-bottom: 2vmax !important;
-}
-#footer-sections .section-border,
-#footer-sections .section-background {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-#footer-sections > *:not(.codex-canvas-bg):not(link):not(script) {
-  position: relative;
-  z-index: 1;
+.page-section:has(> .fluid-engine:empty):not(:has(.fe-block)) {
+  display: none !important;
 }
 #footer-sections img[src*="logo+large.png"],
 #footer-sections img[src*="title.png"] {
   filter: brightness(0) invert(1);
-}
-/* Dim the footer canvas itself (uniform everywhere) instead of an overlay
-   scrim, which left uncovered patches where geometry didn't line up. */
-#footer-sections .codex-canvas-bg canvas {
-  opacity: 0.4;
 }
 
 /* Hide Squarespace's background pause button */
