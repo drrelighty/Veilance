@@ -1631,8 +1631,28 @@
 
         
         <div class="section-background-overlay" style="opacity: 0.15;"></div>
-      
-    
+
+
+      <div id="codex-books-canvas-wrap" class="codex-canvas-bg"></div>
+      <link rel="stylesheet" href="/assets/site-canvas-bg.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+      <script src="/assets/site-canvas-bg.js"></script>
+      <style>
+        #codex-books-hero-section { position: relative; }
+        #codex-books-canvas-wrap ~ .content-wrapper {
+          position: relative;
+          z-index: 1;
+        }
+        #codex-books-canvas-wrap {
+          background: #000;
+        }
+        #codex-books-canvas-wrap canvas {
+          opacity: 0.35;
+        }
+        #block-08f273aa10fa10902baf {
+          background: #000 !important;
+        }
+      </style>
     </div>
   </div>
   <div
@@ -2122,6 +2142,7 @@
   .fe-block-b921dfd0a8489632aa76 {
     grid-area: 56/2/58/10;
     z-index: 12;
+    background: #000;
 
     @media (max-width: 767px) {
       
@@ -2141,8 +2162,9 @@
 
   @media (min-width: 768px) {
     .fe-block-b921dfd0a8489632aa76 {
-      grid-area: 28/4/30/13;
+      grid-area: 28/4/30/24;
       z-index: 12;
+      background: #000;
 
       
         
