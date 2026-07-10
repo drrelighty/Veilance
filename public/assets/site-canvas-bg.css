@@ -19,6 +19,9 @@
 .page-section:has(.fluid-engine:empty):not(:has(.fe-block)) {
   display: none !important;
 }
+.page-section:has(.blog-side-by-side-wrapper:empty) {
+  display: none !important;
+}
 #footer-sections img[src*="logo+large.png"],
 #footer-sections img[src*="title.png"] {
   filter: brightness(0) invert(1);
