@@ -80,7 +80,7 @@
 /* Static gradient for non-homepage headers (inverted: light-based, since
    these pages use black text) */
 #header {
-  background: linear-gradient(135deg, #ffffff 0%, #e4e4e4 50%, #ffffff 100%) !important;
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0.7) 55%, rgba(255,255,255,0) 100%) !important;
 }
 body#collection-69dc4165524a8040ff914e1e #header {
   background: none !important;
