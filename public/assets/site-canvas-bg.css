@@ -86,6 +86,14 @@
   background-color: transparent !important;
   opacity: 0 !important;
 }
+/* Static gradient for non-homepage headers (inverted: light-based, since
+   these pages use black text) */
+#header {
+  background: linear-gradient(135deg, #ffffff 0%, #e4e4e4 50%, #ffffff 100%) !important;
+}
+body#collection-69dc4165524a8040ff914e1e #header {
+  background: none !important;
+}
 #codex-header-canvas-wrap {
   z-index: -1;
 }
