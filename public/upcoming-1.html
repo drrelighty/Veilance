@@ -1471,13 +1471,32 @@
       font-family: 'Libre Baskerville', serif;
       color: #000;
     }
-    .codex-event { max-width: 820px; margin: 0 auto; }
+    .codex-event-layout {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      gap: clamp(2rem, 5vw, 4rem);
+    }
+    .codex-event-poster {
+      flex: 0 0 42%;
+      max-width: 42%;
+    }
+    .codex-event-poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .codex-event {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
     .codex-event h2 {
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       font-weight: 400;
       font-style: italic;
       margin: 0 0 1.2em 0;
-      text-align: center;
+      text-align: left;
     }
     .codex-event p {
       font-size: clamp(0.95rem, 1.15vw, 1.1rem);
@@ -1486,16 +1505,30 @@
     }
     .codex-event .codex-event-details {
       margin-top: 2.5em;
-      text-align: center;
+      text-align: left;
       font-style: italic;
     }
+    @media (max-width: 900px) {
+      .codex-event-layout {
+        flex-direction: column;
+      }
+      .codex-event-poster {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+    }
   </style>
-  <div class="codex-event">
-    <h2>After the Flood</h2>
-    <p>The Babirusa are a species of wild swine existing on a scatter of Indonesian islands. They are known and sensationalized for their tusks which grow in arcs from their face and, if not dulled down, will form a whorled spear piercing the skull in a natural suicide. The earliest record of the Babirusa comes from the Pleistocene epoch. On the wall of a cave in Sulawesi island, a Babirusa is effortlessly replicated in burnt sienna strokes. Near its ass is a human hand outlined with paint, spit by a person 40,000 years ago.</p>
-    <p>Veilance Press in collaboration with Flatline presents <em>After the Flood</em>; sculptures from artists Chris Bradley, Milo Brown, Daniel H. Hoffmann, Willem Kusserow-Lair, Neiva M., Radu Nistoroiu, and David Sprecher. This collection reimagines the organic, repurposes the tool and demonstrates the generative instant where raw, inert material meets the guiding hand. The works do not mimic nature, they are themselves phenomena of nature and nature's contradictions, like a silent wooden slab which becomes an instrument, or an adaptation which subverts its animal; nature turns back to reference itself with the circular effort cruelly distilled in the horns of the Babirusa.</p>
-    <p>Veilance is a surrealist press based in Chicago, IL. This group exhibition accompanies the release of their second annual magazine, <em>Issue 1: UN/NATURAL</em> and includes new work from artists featured in the issue.</p>
-    <p class="codex-event-details"><em>After the Flood</em> opens on July 17th, 2026 from 6:30&ndash;9:00pm at Flatline Gallery, 1925 N Milwaukee Ave, Chicago.</p>
+  <div class="codex-event-layout">
+    <div class="codex-event-poster">
+      <img src="/assets/images/after-the-flood-poster.jpg" alt="After the Flood exhibition poster">
+    </div>
+    <div class="codex-event">
+      <h2>After the Flood</h2>
+      <p>The Babirusa are a species of wild swine existing on a scatter of Indonesian islands. They are known and sensationalized for their tusks which grow in arcs from their face and, if not dulled down, will form a whorled spear piercing the skull in a natural suicide. The earliest record of the Babirusa comes from the Pleistocene epoch. On the wall of a cave in Sulawesi island, a Babirusa is effortlessly replicated in burnt sienna strokes. Near its ass is a human hand outlined with paint, spit by a person 40,000 years ago.</p>
+      <p>Veilance Press in collaboration with Flatline presents <em>After the Flood</em>; sculptures from artists Chris Bradley, Milo Brown, Daniel H. Hoffmann, Willem Kusserow-Lair, Neiva M., Radu Nistoroiu, and David Sprecher. This collection reimagines the organic, repurposes the tool and demonstrates the generative instant where raw, inert material meets the guiding hand. The works do not mimic nature, they are themselves phenomena of nature and nature's contradictions, like a silent wooden slab which becomes an instrument, or an adaptation which subverts its animal; nature turns back to reference itself with the circular effort cruelly distilled in the horns of the Babirusa.</p>
+      <p>Veilance is a surrealist press based in Chicago, IL. This group exhibition accompanies the release of their second annual magazine, <em>Issue 1: UN/NATURAL</em> and includes new work from artists featured in the issue.</p>
+      <p class="codex-event-details"><em>After the Flood</em> opens on July 17th, 2026 from 6:30&ndash;9:00pm at Flatline Gallery, 1925 N Milwaukee Ave, Chicago.</p>
+    </div>
   </div>
 </section>
 
