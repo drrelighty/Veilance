@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Bash(git fetch *)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(awk '{ print length, NR }' public/index.html)",
+      "Bash(xargs sed -i '' 's/1783730228/1783731746/g')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/index.html)",
+      "Bash(cat /private/tmp/claude-502/-Users-admin-Veilance/14836965-6252-4d3f-b63a-0f4ab8b77ecc/tasks/bf77kjfbv.output 2>/dev/null | tail -20 *)",
+      "Read(//Users/admin/Library/Caches/ms-playwright/**)",
+      "Bash(NODE_PATH=/Users/admin/.npm/_npx/31e32ef8478fbf80/node_modules node /private/tmp/claude-502/-Users-admin-Veilance/14836965-6252-4d3f-b63a-0f4ab8b77ecc/scratchpad/verify.js)",
+      "Bash(pkill -f \"http.server 8099\")",
+      "Bash(xattr -l \"/Users/admin/Library/Caches/ms-playwright/chromium-1224/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing\")",
+      "Bash(rm -rf ~/Library/Caches/ms-playwright/chromium-1224 ~/Library/Caches/ms-playwright/__dirlock)",
+      "Read(//Users/admin/.npm/_npx/31e32ef8478fbf80/node_modules/playwright/**)",
+      "Bash(node cli.js install chromium)",
+      "Bash(kill -9 29692)"
+    ]
+  }
+}
