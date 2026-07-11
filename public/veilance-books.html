@@ -1643,7 +1643,17 @@
           position: relative;
           z-index: 1;
         }
+        /* Positioning duplicated inline (redundant with .codex-canvas-bg in
+           the external stylesheet) so the wrap is already an absolute,
+           full-bleed black layer on first paint instead of a plain black
+           rectangle sitting in normal document flow until that external
+           file finishes loading -- that gap is what shows as a flash of
+           misplaced/default-colored layers while the page loads. */
         #codex-books-canvas-wrap {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          pointer-events: none;
           background: #000;
         }
         #codex-books-canvas-wrap canvas {
@@ -1700,6 +1710,10 @@
           z-index: 1;
         }
         #codex-books-canvas-wrap {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          pointer-events: none;
           background: #000;
         }
         #codex-books-canvas-wrap canvas {
@@ -7292,6 +7306,12 @@
   #footer-sections > *:not(.codex-canvas-bg):not(link):not(script):not(style) {
     position: relative;
     z-index: 1;
+  }
+  #codex-footer-canvas-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
   }
 </style>
   
