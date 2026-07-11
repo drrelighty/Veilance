@@ -89,17 +89,6 @@ body:not(#collection-69dc4165524a8040ff914e1e) #header .header-background-solid 
   opacity: 1 !important;
   min-height: 132px !important;
 }
-body:not(#collection-69dc4165524a8040ff914e1e) #header::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 220px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
 #codex-header-canvas-wrap {
   z-index: -1;
 }
