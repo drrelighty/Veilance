@@ -73,8 +73,33 @@ body#collection-69dc4165524a8040ff914e1e .sqs-html-content p {
 }
 body#collection-69dc4165524a8040ff914e1e #header,
 body#collection-69dc4165524a8040ff914e1e .header-announcement-bar-wrapper {
-  background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 70%, rgba(255,255,255,0) 100%) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.7) 82%, rgba(255,255,255,0) 100%) !important;
   background-color: transparent !important;
+}
+/* The header itself is only ~170px tall, too short for the white glow to
+   taper off gently before handing off to the raw (much higher-contrast)
+   full-page canvas beneath it — without this, the fade clips hard at the
+   header's own bottom edge and reads as a flat pasted-on block. Extend a
+   second, longer fade past the header's box into the content below so the
+   handoff is gradual instead of a seam. */
+body#collection-69dc4165524a8040ff914e1e #header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+#codex-header-canvas-wrap {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  opacity: 0.14 !important;
+  mix-blend-mode: normal !important;
+  pointer-events: none !important;
 }
 body#collection-69dc4165524a8040ff914e1e .header-background-solid,
 body#collection-69dc4165524a8040ff914e1e .header-background,
@@ -214,6 +239,9 @@ body#collection-69dc4165524a8040ff914e1e #header .header-nav-folder-title {
 }
 body#collection-69dc4165524a8040ff914e1e #header .header-display-desktop {
   justify-content: center !important;
+}
+body#collection-69dc4165524a8040ff914e1e #header .header-inner {
+  position: relative !important;
 }
 [id="69dc4165524a8040ff914e21"] {
   position: relative;
@@ -630,6 +658,7 @@ body#collection-69dc4165524a8040ff914e1e .fe-block-yui_3_17_2_1_1776053164867_31
         
         " data-test="header-inner">
         <!-- Background -->
+        <div id="codex-header-canvas-wrap" class="codex-canvas-bg" data-invert="true"></div>
         <link rel="stylesheet" href="/assets/site-canvas-bg.css?v=1783731746">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
         <script src="/assets/site-canvas-bg.js?v=1783731746"></script>
