@@ -81,13 +81,14 @@
    headers: a solid start easing down into a longer fade rather than a
    flat block with an abrupt edge. */
 body:not(#collection-69dc4165524a8040ff914e1e) #header {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.75) 82%, rgba(255,255,255,0) 100%) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0.85) 58%, rgba(255,255,255,0.55) 78%, rgba(255,255,255,0.2) 92%, rgba(255,255,255,0) 100%) !important;
+  min-height: 200px !important;
 }
 body:not(#collection-69dc4165524a8040ff914e1e) #header .header-background-solid {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.75) 82%, rgba(255,255,255,0) 100%) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0.85) 58%, rgba(255,255,255,0.55) 78%, rgba(255,255,255,0.2) 92%, rgba(255,255,255,0) 100%) !important;
   background-color: transparent !important;
   opacity: 1 !important;
-  min-height: 132px !important;
+  min-height: 200px !important;
 }
 #codex-header-canvas-wrap {
   z-index: -1;
