@@ -76,14 +76,29 @@
   background-color: transparent !important;
   opacity: 0 !important;
 }
+/* Same soft, tapering-veil treatment as the homepage header (dark
+   gradient over the canvas there), just in white for these white-page
+   headers: a solid start easing down into a longer fade rather than a
+   flat block with an abrupt edge. */
 body:not(#collection-69dc4165524a8040ff914e1e) #header {
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 76%, #f4f4f4 100%) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.75) 82%, rgba(255,255,255,0) 100%) !important;
 }
 body:not(#collection-69dc4165524a8040ff914e1e) #header .header-background-solid {
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 76%, #f4f4f4 100%) !important;
-  background-color: #ffffff !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 55%, rgba(255,255,255,0.75) 82%, rgba(255,255,255,0) 100%) !important;
+  background-color: transparent !important;
   opacity: 1 !important;
   min-height: 132px !important;
+}
+body:not(#collection-69dc4165524a8040ff914e1e) #header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 #codex-header-canvas-wrap {
   z-index: -1;
