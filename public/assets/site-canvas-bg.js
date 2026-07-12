@@ -202,6 +202,15 @@
   function init() {
     var containers = document.querySelectorAll('.' + CONTAINER_CLASS);
     containers.forEach(function (el) {
+      // This script tag is included multiple times on some pages (once per
+      // section that uses a canvas background). Guard against re-running
+      // init() on a container that's already been set up -- otherwise each
+      // inclusion stacks a brand new p5 instance/canvas on top of the last,
+      // which causes visible flicker and extra work during page load.
+      if (el.getAttribute('data-codex-canvas-initialized') === 'true') {
+        return;
+      }
+      el.setAttribute('data-codex-canvas-initialized', 'true');
       new p5(makeSketch(el), el);
     });
   }
