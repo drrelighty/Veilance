@@ -111,7 +111,9 @@
         }
         p.noLoop();
         doSetup();
-        setInterval(doSetup, config.interval);
+        if (container.getAttribute('data-static') !== 'true') {
+          setInterval(doSetup, config.interval);
+        }
       };
 
       p.draw = function () {
